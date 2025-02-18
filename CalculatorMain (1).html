@@ -24,26 +24,16 @@
             text-align:center;
             transition:1s ease;
             box-shadow: 2px 4px #dbd7ff;
-            
-
         }
         .OutBox:hover{
             border-radius:15px;
             transition:1s ease;
             transform:translateX(1%);
-            transform:translateX(1%);
             box-shadow: 0px 0px #dbd7ff;
-            
         }
         @keyframes fade-in{
-            0%{
-                opacity:0;
-                
-            }
-            100%{
-                opacity:1;
-                
-            }
+            0%{ opacity:0; }
+            100%{ opacity:1; }
         }
         .OpButton h3{
             color:white;
@@ -51,10 +41,8 @@
         .ExtraButton h3{
             color:white;
         }
-
         .Row{
             display:table;
-            
             margin: 0 auto;
             padding: 3px;
             position: relative;
@@ -64,7 +52,6 @@
             height:50px;
             width:50px;
             transition:0.1s ease;
-            
         }
         .column:hover{
             opacity:0.4;
@@ -98,142 +85,227 @@
         }
         .Operations{
             position:relative;
-            
         }
         .Operations .column{
             position:relative;
             top:5px;
             padding:3px;
-            
         }
         input[type=text] {
-  width: 90%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
+            width: 90%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
 
+        /* New CSS for Image Grid */
+        .image-grid {
+            position:absolute;
+            top:600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        .image-item {
+            width: 30%;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            border-radius: 10px;
+            filter: grayscale(80%);
+            transition: transform 0.5s, filter 0.5s;
+        }
+        .image-item:hover {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Variables for colors */
+        :root {
+            --button-bg-color: rgb(146, 38, 11);
+            --button-hover-bg-color: rgb(255, 255, 255);
+        }
+
+        /* Sticky Image */
+        .sticky-image {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 20px;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://www.w3schools.com/w3images/fjords.jpg');
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        /* Math Functions */
+        .math-functions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .math-functions button {
+            padding: 15px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .math-functions button:hover {
+            background-color: #45a049;
+        }
     </style>
     <title>Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
     <div class="OutBox">
-        
         <div class="Display">
             <input type="text"></input>
-            
         </div><br>
         <div class="Operations">
-        <div class="Row">
-            <div class="column">
-            <div class="Extra">
-                <button class="ExtraButton"><h3>AC</h3></button>
+            <div class="Row">
+                <div class="column">
+                    <div class="Extra">
+                        <button class="ExtraButton"><h3>AC</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="ExtraButton"><h3>Undo</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="ExtraButton"><h3>%</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Operator">
+                        <button class="OpButton"><h3>/</h3></button>
+                    </div>
+                </div>
             </div>
+            <div class="Row">
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>7</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>8</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>9</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Operator">
+                        <button class="OpButton"><h3>X</h3></button>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="ExtraButton"><h3>Undo</h3></button>
+            <div class="Row">
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>4</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>5</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>6</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Operator">
+                        <button class="OpButton"><h3>-</h3></button>
+                    </div>
+                </div>
             </div>
+            <div class="Row">
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>1</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>2</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>3</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Operator">
+                        <button class="OpButton"><h3>+</h3></button>
+                    </div>
+                </div>
             </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="ExtraButton"><h3>%</h3></button>
+            <div class="Row">
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>0</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>00</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Extra">
+                        <button class="NumButton"><h3>.</h3></button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="Operator">
+                        <button class="OpButton"><h3>=</h3></button>
+                    </div>
+                </div>
             </div>
-            </div>
-            <div class="column">
-            <div class="Operator">
-                <button class="OpButton"><h3>/</h3></button>
-            </div>
-        </div>
-        </div>
-        <div class="Row">
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>7</h3></button>
-            </div>
-        </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>8</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>9</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Operator">
-                <button class="OpButton"><h3>X</h3></button>
-            </div>
-        </div>
-    </div>
-        <div class="Row">
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>4</h3></button>
-            </div>
-        </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>5</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>6</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Operator">
-                <button class="OpButton"><h3>-</h3></button>
-            </div>
-        </div></div>
-        <div class="Row">
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>1</h3></button>
-            </div>
-        </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>2</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>3</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Operator">
-                <button class="OpButton"><h3>+</h3></button>
-            </div>
-        </div></div>
-        <div class="Row">
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>0</h3></button>
-            </div>
-        </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>00</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Extra">
-                <button class="NumButton"><h3>.</h3></button>
-            </div>
-            </div>
-            <div class="column">
-            <div class="Operator">
-                <button class="OpButton"><h3>=</h3></button>
-            </div></div>
         </div>
     </div>
 
+    <!-- New Image Grid Section -->
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="https://www.w3schools.com/w3images/fjords.jpg" alt="Image 1">
+        </div>
+        <div class="image-item">
+            <img src="https://www.w3schools.com/w3images/mountains.jpg" alt="Image 2">
+        </div>
+        <div class="image-item">
+            <img src="https://www.w3schools.com/w3images/lights.jpg" alt="Image 3">
+        </div>
+        <div class="image-item">
+            <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Image 4">
+        </div>
+        <div class="image-item">
+            <img src="https://www.w3schools.com/w3images/snow.jpg" alt="Image 5">
+        </div>
     </div>
+
+    
+   
 </body>
 </html>
