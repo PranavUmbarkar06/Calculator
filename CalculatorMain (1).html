@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp13041472.jpg');
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 3em;
+            color: #ff6347;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .OutBox {
+            animation: fade-in 1s ease;
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 320px;
+            height: auto;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+            padding: 20px;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .OutBox:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 99, 71, 0.8);
+        }
+
+        .Display input {
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            font-size: 1.5em;
+            border-radius: 10px;
+            text-align: right;
+            margin-bottom: 20px;
+            box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .Row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .column {
+            width:90px;
+            height: 90px;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 25px rgba(255, 99, 71, 0.8);
+        }
+
+        .OpButton {
+            background-color: #ff6347;
+        }
+
+        .ExtraButton {
+            background-color: #32cd32;
+        }
+
+        .NumButton {
+            background-color: #4caf50;
+        }
+
+        .OpButton:hover {
+            background-color: #e53e3e;
+        }
+
+        .ExtraButton:hover {
+            background-color: #28a745;
+        }
+
+        .NumButton:hover {
+            background-color: #45a049;
+        }
+
+        .Operations .column {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="OutBox">
+        <h1>Calculator</h1>
+        <div class="Display">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="Operations">
+            <div class="Row">
+                <div class="column"><button class="ExtraButton"><h3>AC</h3></button></div>
+                <div class="column"><button class="ExtraButton"><h3>Undo</h3></button></div>
+                <div class="column"><button class="ExtraButton"><h3>%</h3></button></div>
+                <div class="column"><button class="OpButton"><h3>/</h3></button></div>
+            </div>
+            <div class="Row">
+                <div class="column"><button class="NumButton"><h3>7</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>8</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>9</h3></button></div>
+                <div class="column"><button class="OpButton"><h3>X</h3></button></div>
+            </div>
+            <div class="Row">
+                <div class="column"><button class="NumButton"><h3>4</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>5</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>6</h3></button></div>
+                <div class="column"><button class="OpButton"><h3>-</h3></button></div>
+            </div>
+            <div class="Row">
+                <div class="column"><button class="NumButton"><h3>1</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>2</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>3</h3></button></div>
+                <div class="column"><button class="OpButton"><h3>+</h3></button></div>
+            </div>
+            <div class="Row">
+                <div class="column"><button class="NumButton"><h3>0</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>00</h3></button></div>
+                <div class="column"><button class="NumButton"><h3>.</h3></button></div>
+                <div class="column"><button class="OpButton"><h3>=</h3></button></div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
